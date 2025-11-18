@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>iComfort</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body class="catalog-page">
+
+    <!-- 1. ЛОАДЕР (ЗАГРУЗЧИК) -->
+    <div class="loader-wrapper">
+        <div class="loader-logo">
+            <?xml version="1.0" style="width: 120px; border-radius: 20px; margin: 0 auto;" encoding="utf-8" ?><svg
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="27"
+                viewBox="0 0 120 27">
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M240.085 57.2233C266.311 54.509 289.766 73.5907 292.46 99.8323C295.153 126.074 276.065 149.528 249.836 152.204C223.633 154.878 200.221 135.803 197.53 109.588C194.839 83.3732 213.887 59.9348 240.085 57.2233ZM246.853 135.826C249.373 136.081 253.837 134.604 256.14 133.512C273.818 125.13 275.855 96.3389 264.312 82.3494C260.191 77.2573 254.187 74.0493 247.666 73.455C246.936 73.3871 244.943 73.3182 244.24 73.388C236.816 74.1214 230.102 76.3124 225.465 82.4531C210.874 101.775 218.329 137.243 246.853 135.826Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M572.658 57.2064C598.871 54.7829 622.091 74.0635 624.542 100.288C626.992 126.512 607.748 149.765 581.54 152.246C555.292 154.731 532.008 135.439 529.553 109.175C527.099 82.9097 546.405 59.6336 572.658 57.2064ZM578.876 135.934C579.893 135.756 580.903 135.566 581.919 135.375C609.954 130.102 611.24 83.0443 584.721 74.5596C581.881 73.6512 578.325 73.1716 575.337 73.4089C547.483 76.5897 542.727 114.288 561.449 130.898C566.298 135.201 572.582 135.985 578.876 135.934Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M387.833 79.83C389.388 74.869 392.024 69.8599 395.798 66.1143C406.184 55.7092 426.685 54.5925 437.331 65.0875C444.442 72.0969 445.821 84.2013 445.629 93.6441C445.251 112.247 445.912 130.89 445.635 149.481C439.025 149.571 432.216 149.467 425.59 149.447C425.145 145.046 425.349 138.56 425.304 133.907C425.118 123.792 425.101 113.675 425.254 103.559C425.391 90.6751 426.303 72.699 408.455 72.8195C386.324 72.9689 389.004 93.5641 389.064 109.315L389.099 135.779C389.14 140.344 389.129 144.909 389.066 149.474C382.443 149.435 375.819 149.465 369.197 149.564C368.357 135.942 369.402 121.558 369.032 107.815C368.698 95.3598 371.585 75.0652 354.172 72.9803C349.359 72.4039 342.765 73.6948 339.006 76.7496C336.376 78.8957 334.481 81.8107 333.587 85.087C332.19 90.257 332.442 99.0458 332.454 104.563L332.534 131.999C332.551 137.295 332.772 144.377 332.24 149.504C325.664 149.306 319.082 149.333 312.508 149.586C311.477 134.003 312.284 115.509 312.264 99.6514C312.25 87.8752 311.467 70.6903 312.523 59.4971C319.252 59.7593 325.99 59.7531 332.719 59.4784C332.197 65.1022 332.703 71.4603 332.033 78.078C338.355 65.9914 342.625 59.8538 356.969 57.9562C363.124 57.0833 372.41 58.9659 377.512 62.5993C383.651 66.9716 386.477 72.6084 387.833 79.83Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M128.644 12.476C146.185 11.6698 171.717 14.904 183.348 29.4977C181.604 31.9685 175.089 39.1783 172.388 40.4958C171.109 41.1195 161.078 35.7096 158.591 34.7415C143.945 29.0401 125.891 28.9226 111.455 35.2395C100.469 39.9784 91.8307 48.911 87.4583 60.0523C82.1802 73.5691 82.1831 92.1552 88.1584 105.391C101.332 134.571 136.51 138.782 163.056 127.052C165.683 125.889 169.266 123.789 171.861 122.365C175.066 124.875 180.823 131.172 183.956 134.329C159.047 158.886 109.883 156.133 84.2717 134.097C56.547 110.243 53.3594 64.9216 76.9772 37.0678C90.663 20.9274 108.058 14.1544 128.644 12.476Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M505.579 12.4574C512.529 12.1265 520.721 12.9107 527.598 13.75C527.828 18.6669 527.831 24.0065 527.926 28.9573C522.714 28.9887 517.666 27.6609 512.507 27.7094C494.03 27.883 497.104 47.5322 497.425 59.8707C506.723 59.4086 516.412 59.4999 525.748 59.4547C525.519 63.3051 526.413 72.001 525.175 74.7704C522.358 75.9965 501.695 75.4916 497.441 75.4056C497.731 81.9747 497.457 90.2884 497.439 96.9895L497.492 134.623C497.538 139.155 497.736 145.054 497.325 149.441C491.28 149.69 483.654 149.515 477.404 149.589C476.183 134.01 477.47 117.081 477.039 101.372C476.806 92.8874 476.919 83.7854 477.167 75.3138C472.189 75.63 465.064 75.4557 459.923 75.49C459.392 70.3217 459.51 64.7686 459.894 59.5971L477.32 59.6731C475.747 36.0929 478.226 16.0242 505.579 12.4574Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M738.71 38.0002L739.29 38.2199C740.062 39.7685 739.687 57.0699 739.372 59.655C749.263 59.552 759.31 59.8374 769.153 59.5587C769.568 63.9492 769.239 70.9615 768.963 75.4653C759.52 75.3449 748.488 75.7335 739.351 75.3258C740.911 87.8807 736.97 121.571 741.644 130.506C742.92 132.945 744.899 134.756 747.547 135.571C754.173 137.612 762.808 133.392 768.47 130.352C768.594 135.653 768.526 141.163 768.531 146.481L765.698 147.814C759.748 150.605 752.167 151.654 745.66 151.699C717.194 151.896 719.186 127.486 719.209 106.705L719.281 75.2107C717.08 75.4506 703.561 75.627 702.181 74.923C702.995 72.2101 734.407 41.704 738.71 38.0002Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M688.302 59.0773C691.392 58.8539 694.417 58.9367 697.509 58.9813C697.873 63.8491 697.761 73.7863 697.529 78.6323C691.69 77.4508 685.486 77.001 679.609 78.1562C674.385 79.1832 669.675 81.5282 667.027 86.3989C663.024 93.7644 664.349 128.1 664.549 137.688C664.611 140.667 665.449 146.177 663.753 148.709C661.822 149.868 647.882 149.534 644.597 149.587C644.386 145.839 644.366 142.041 644.311 138.285L644.295 89.74C644.296 79.939 644.113 69.3216 644.505 59.6051C650.616 59.7328 658.52 59.9315 664.5 59.4847C664.933 66.9642 664.789 74.466 664.067 81.9233C668.944 69.6263 674.688 61.5238 688.302 59.0773Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M29.5202 59.5486L41.4414 59.6284C41.6041 63.6543 41.2251 69.1615 41.1664 73.3554C41.0891 82.0274 41.0811 90.6998 41.1426 99.3718L41.3144 130.642C41.3384 136.612 41.6252 143.158 41.1187 149.025C38.5982 149.517 36.95 149.485 34.3839 149.509L21.2258 149.575C20.9359 145.317 20.6735 140.213 20.8459 135.981C21.8643 110.977 19.5556 84.4957 21.1833 59.6734L29.5202 59.5486Z" />
+                <path fill="#000000" transform="matrix(0.152091 0 0 0.154286 -6.10352e-05 0)"
+                    d="M29.4657 12.1679C36.3111 11.3168 42.5705 16.1242 43.5181 22.9605C44.4657 29.7968 39.75 36.1271 32.9315 37.1719C28.4341 37.861 23.9142 36.0739 21.1026 32.4947C18.291 28.9156 17.6234 24.099 19.3554 19.8894C21.0874 15.6798 24.9506 12.7293 29.4657 12.1679Z" />
+            </svg>
+        </div>
+    </div>
+
+
+    <main class="main">
+        <!-- 2. ПОИСК -->
+        <div class="search-bar-container container">
+            <div class="search-bar">
+                <i class='bx bx-search'></i>
+                <input type="text" id="searchInput" placeholder="Поиск по товарам...">
+            </div>
+        </div>
+
+        <!-- 3. ХИТЫ ПРОДАЖ -->
+        <section class="products section container" id="top-sellers">
+            <h2 class="section__title">Хиты продаж</h2>
+            <div class="products__grid">
+                <!-- Карточка товара с бейджем -->
+                <a href="product.html" class="product-card">
+                    <div class="product-badge hit">Хит</div>
+                    <div class="product-card__image-wrapper">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=512&hei=480&fmt=jpeg&qlt=95&.v=1692845699233"
+                            alt="iPhone 15 Pro" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__name">iPhone 15 Pro</h3>
+                    <p class="product-card__price">От 14 999 000 сум</p>
+                </a>
+                <a href="product.html" class="product-card">
+                    <div class="product-badge hit">Хит</div>
+                    <div class="product-card__image-wrapper">
+                        <img src="./78dee88a5e4c15a0b747ff147d682f4e2025011219155911879ENm8ajLjV7.jpg (1).png"
+                            alt="MacBook Pro 14" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__name">MacBook Pro 14" M3</h3>
+                    <p class="product-card__price">От 22 499 000 сум</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ -->
+        <section class="products section container" id="special-offers">
+            <h2 class="section__title">Специальные предложения</h2>
+            <div class="products__grid">
+                <a href="product.html" class="product-card">
+                    <div class="product-badge sale">Скидка</div>
+                    <div class="product-card__image-wrapper">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-yellow?wid=512&hei=480&fmt=jpeg&qlt=95&.v=1676505838521"
+                            alt="iPhone 14" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__name">iPhone 14</h3>
+                    <p class="product-card__price"><del>10 499 000</del> 9 999 000 сум</p>
+                </a>
+                <a href="product.html" class="product-card">
+                    <div class="product-badge sale">Скидка</div>
+                    <div class="product-card__image-wrapper airpods">
+                        <img src="./MME73.png" alt="AirPods 3" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__name">AirPods 3</h3>
+                    <p class="product-card__price"><del>2 599 000</del> 2 299 000 сум</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 5. ОСНОВНОЙ КАТАЛОГ -->
+        <section class="products section container" id="catalog">
+            <h2 class="section__title">Каталог товаров</h2>
+            <div class="products__grid" id="products-list">
+                <!-- iPhone -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-wrapper"><img
+                            src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=512&hei=480&fmt=jpeg&qlt=95&.v=1692845699233"
+                            alt="iPhone 15 Pro" class="product-card__image"></div>
+                    <h3 class="product-card__name">iPhone 15 Pro</h3>
+                    <p class="product-card__price">От 14 999 000 сум</p>
+                </a>
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-wrapper"><img
+                            src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=512&hei=480&fmt=jpeg&qlt=95&.v=1692923777972"
+                            alt="iPhone 15" class="product-card__image"></div>
+                    <h3 class="product-card__name">iPhone 15</h3>
+                    <p class="product-card__price">От 11 499 000 сум</p>
+                </a>
+                <!-- Mac -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-wrapper mac2"><img
+                            src="https://maxcom.uz/storage/product/0lypMoUccBGEIsGNSh3burFDqYZwBH3L4Z8oNeZr.png"
+                            alt="MacBook Pro 14" class="product-card__image"></div>
+                    <h3 class="product-card__name">MacBook Pro 14" M3</h3>
+                    <p class="product-card__price">От 22 499 000 сум</p>
+                </a>
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-wrapper mac"><img
+                            src="./macbook-air-space-gray-select-201810-Photoroom.png" alt="MacBook Air M1"
+                            class="product-card__image"></div>
+                    <h3 class="product-card__name">MacBook Air M1</h3>
+                    <p class="product-card__price">От 10 999 000 сум</p>
+                </a>
+                <!-- iPad -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-wrapper ipad"><img
+                            src="ipad-pro-13-select-wifi-spaceblack-202405-Photoroom.png" alt="iPad Pro M4"
+                            class="product-card__image"></div>
+                    <h3 class="product-card__name">iPad Pro 13" M4</h3>
+                    <p class="product-card__price">От 17 999 000 сум</p>
+                </a>
+                <!-- AirPods -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-wrapper airpods"><img src="./MME73.png" alt="AirPods Pro 2"
+                            class="product-card__image"></div>
+                    <h3 class="product-card__name">AirPods Pro 2</h3>
+                    <p class="product-card__price">От 2 999 000 сум</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

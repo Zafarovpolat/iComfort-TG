@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Купить iPhone 15 Pro — iComfort</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body class="product-page-body">
+
+    <main class="main">
+        <section class="product-page section container">
+            <div class="product-page__main-grid">
+                <!-- Галерея -->
+                <div class="product-gallery">
+                    <div class="product-gallery__main-image">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845699233"
+                            alt="iPhone 15 Pro Natural Titanium" id="main-product-image">
+                    </div>
+                </div>
+
+                <!-- Информация о товаре -->
+                <div class="product-info">
+                    <h1 class="product-info__title">iPhone 15 Pro</h1>
+                    <p class="product-info__short-desc">Новая эра производительности и дизайна.</p>
+
+                    <div class="product-info__price">
+                        <span class="price-main" data-price="14999000">14 999 000 сум</span>
+                        <span class="price-credit">или от 1 249 916 сум/мес</span>
+                    </div>
+
+                    <!-- Выбор цвета -->
+                    <div class="product-options">
+                        <label class="option-label">Цвет: <span id="color-name">Natural Titanium</span></label>
+                        <div class="option-selector color-selector">
+                            <div class="color-option active" style="--color-value: #8A857B;"
+                                data-img="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845699233"
+                                data-color-name="Natural Titanium"></div>
+                            <div class="color-option" style="--color-value: #444F5A;"
+                                data-img="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-bluetitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845697693"
+                                data-color-name="Blue Titanium"></div>
+                            <div class="color-option" style="--color-value: #F1F2ED;"
+                                data-img="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-whitetitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845698048"
+                                data-color-name="White Titanium"></div>
+                            <div class="color-option" style="--color-value: #464646;"
+                                data-img="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845696124"
+                                data-color-name="Black Titanium"></div>
+                        </div>
+                    </div>
+
+                    <!-- Выбор памяти -->
+                    <div class="product-options">
+                        <label class="option-label">Память:</label>
+                        <div class="option-selector text-selector">
+                            <div class="text-option active" data-price-add="0">128GB</div>
+                            <div class="text-option" data-price-add="1500000">256GB</div>
+                            <div class="text-option" data-price-add="3000000">512GB</div>
+                            <div class="text-option" data-price-add="5000000">1TB</div>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка "Добавить в корзину" УДАЛЕНА. Вместо нее будет MainButton из Telegram. -->
+
+                    <!-- Информация о доставке -->
+                    <ul class="product-info__availability">
+                        <li><i class='bx bx-check-shield'></i>Официальная гарантия 1 год</li>
+                        <li><i class='bx bxs-truck'></i>Доставка сегодня по Ташкенту</li>
+                        <li><i class='bx bx-check-circle'></i>В наличии</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
