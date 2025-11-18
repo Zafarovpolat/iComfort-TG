@@ -3,8 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- ОБЩАЯ ИНИЦИАЛИЗАЦИЯ ---
     tg.expand(); // Разворачиваем приложение на весь экран
-    tg.setHeaderColor(tg.themeParams.secondary_bg_color || '#ffffff'); // Цвет для верхней плашки (где время)
-    tg.setBgColor(tg.themeParams.bg_color || '#f5f5f7');
+    // Безопасно устанавливаем цвета, только если функции существуют
+    if (tg.setHeaderColor) {
+        tg.setHeaderColor('secondary_bg_color');
+    }
+    if (tg.setBgColor) {
+        tg.setBgColor(tg.themeParams.bg_color || '#ffffff');
+    }
     tg.ready(); // Сообщаем, что приложение готово
 
     // --- Убираем лоадер через 1.5 секунды ---
