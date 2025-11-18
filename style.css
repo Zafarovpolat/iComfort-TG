@@ -175,7 +175,7 @@ del {
 }
 
 .products:nth-of-type(1) .product-card:nth-child(2) .product-card__image {
-    scale: 1.1;
+    scale: 1;
 }
 
 .product-card__image-wrapper.airpods .product-card__image {

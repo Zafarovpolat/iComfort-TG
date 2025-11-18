@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tg.setHeaderColor('secondary_bg_color');
     }
     if (tg.setBgColor) {
-        tg.setBgColor(tg.themeParams.bg_color || '#ffffff');
+        tg.setBgColor('#ffffff');
     }
     tg.ready(); // Сообщаем, что приложение готово
 
